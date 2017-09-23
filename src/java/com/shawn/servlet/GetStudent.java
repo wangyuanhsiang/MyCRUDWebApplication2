@@ -38,7 +38,7 @@ public class GetStudent extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String studentIdStr = request.getParameter("ID");
-        int studentId = studentIdStr.equalsIgnoreCase("") ? 0: Integer.parseInt(studentIdStr);      
+        int studentId = Integer.parseInt(studentIdStr);      
         Student student = studentDAO.getstudent(studentId);
         request.setAttribute("student", student);
         request.getRequestDispatcher("studentinfo.jsp").forward(request, response);

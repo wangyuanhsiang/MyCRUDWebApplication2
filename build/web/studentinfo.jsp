@@ -22,7 +22,7 @@
             <table>
                 <tr>
                     <td>Student ID: </td>
-                    <td><input type="text" name="ID" value="${student.studentId}" /></td>
+                    <td><input type="text" name="ID" value="${student.studentID}" /></td>
                 </tr>
                 <tr>
                     <td>First Name: </td>
@@ -30,7 +30,7 @@
                 </tr>
                 <tr>
                     <td>Last Name: </td>
-                    <td><input type="text" name="lastname" value="${student.lastnmae}" /></td>
+                    <td><input type="text" name="lastname" value="${student.lastname}" /></td>
                 </tr>
                 <tr>
                     <td>Year Level: </td>

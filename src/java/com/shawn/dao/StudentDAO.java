@@ -41,15 +41,20 @@ public class StudentDAO {
 
     public Student getstudent(int studentId) {
         Student student = new Student();
-        String sql = "SELECT * FROM STUDENT WHERE STUDENTID = '" + studentId + "'";
-        ResultSet rs = executeFetchQuery(sql);
+//        String studentIdStre = Integer.toString(studentId);
+//        String sql = "SELECT * FROM STUDENT WHERE STUDENTID = " + studentId + "";
+//        ResultSet rs = executeFetchQuery(sql);
         try {
+            Connection conn = ds.getConnection();
+//            String studentIdStre = Integer.toString(studentId);
+            ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM STUDENT WHERE STUDENTID = "+ studentId+"");
             while (rs.next()) {
                 student.setStudentID(rs.getInt("STUDENTID"));
                 student.setFirstname(rs.getString("FIRSTNAME"));
                 student.setLastname(rs.getString("LASTNAME"));
                 student.setYearLevel(rs.getInt("YEARLEVEL"));
             }
+            conn.close();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }
@@ -58,7 +63,7 @@ public class StudentDAO {
 
     public ArrayList<Student> getAllStudent() {
         ArrayList<Student> list = new ArrayList();
-        Student student = new Student();
+//        Student student = new Student();
 //         String sql = "SELECT * FROM STUDENT";
 //         ResultSet rs = executeFetchQuery(sql);
 
@@ -66,13 +71,14 @@ public class StudentDAO {
             Connection conn = ds.getConnection();
             ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM STUDENT");
             while (rs.next()) {
-//             Student student = new Student();
+                Student student = new Student();
                 student.setStudentID(rs.getInt("STUDENTID"));
                 student.setFirstname(rs.getString("FIRSTNAME"));
                 student.setLastname(rs.getString("LASTNAME"));
                 student.setYearLevel(rs.getInt("YEARLEVEL"));
                 list.add(student);
             }
+            conn.close();
         } catch (Exception e) {
             System.err.println(e.getMessage());
         }

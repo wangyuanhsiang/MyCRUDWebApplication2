@@ -23,11 +23,10 @@
             <th>Year Level</th>
                 <c:forEach items="${requestScope.List}" var="student" >
                 <tr>
-                    <td><a href="${pageContext.request.contextPath}/GetStudent?id=${student.studentID}" >${student.studentID}</a></td>
+                    <td><a href="${pageContext.request.contextPath}/GetStudent?ID=${student.studentID}" >${student.studentID}</a></td>
                     <td>${student.firstname}</td>
-                    <td>${student.lastnmae}</td>
+                    <td>${student.lastname}</td>
                     <td>${student.yearLevel}</td>
-                    <td></td>
                 </tr>
             </c:forEach>
         </table>
