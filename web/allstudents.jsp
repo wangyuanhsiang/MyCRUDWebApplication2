@@ -13,6 +13,11 @@
         <title>All Students</title>
     </head>
     <body>
+        <table border="1">
+            <td><a href="studentinfo.jsp">Student Info</a></td>
+            <td><a href="${pageContext.request.contextPath}/AllStudents">All Students</a></td>
+        </table>
+        <br />
         <h1>List of Students</h1>
         <br/>
 

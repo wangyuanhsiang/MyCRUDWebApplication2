@@ -25,17 +25,17 @@ public class StudentDAO {
     private DataSource ds;
 
     public void addStudent(Student student) {
-        String sql = "INSERT INTO SHAWN.STUDENT VALUES('" + student.getStudentID() + "','" + student.getFirstname() + "','" + student.getLastname() + "', '" + student.getYearLevel() + "' )";
+        String sql = "INSERT INTO SHAWN.STUDENT VALUES(" + student.getStudentID() + ",'" + student.getFirstname() + "','" + student.getLastname() + "', " + student.getYearLevel() + " )";
         executeModifyQuery(sql);
     }
 
     public void editStudent(Student student) {
-        String sql = "UPDATE SHAWN.STUDENT SET FIRSTNAME = '" + student.getFirstname() + "', LASTNAME = '" + student.getLastname() + "', YEARLEVEL = '" + student.getYearLevel() + "' WHERE STUDENTID = '" + student.getStudentID() + "'";
+        String sql = "UPDATE SHAWN.STUDENT SET FIRSTNAME = '" + student.getFirstname() + "', LASTNAME = '" + student.getLastname() + "', YEARLEVEL = " + student.getYearLevel() + " WHERE STUDENTID = " + student.getStudentID() + "";
         executeModifyQuery(sql);
     }
 
     public void deleteStudent(int studentId) {
-        String sql = "DELETE FROM SHAWN.STUDENT WHERE STUDENTID ='" + studentId + "'";
+        String sql = "DELETE FROM SHAWN.STUDENT WHERE STUDENTID =" + studentId + "";
         executeModifyQuery(sql);
     }
 

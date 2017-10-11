@@ -48,15 +48,16 @@ public class StudentServlet extends HttpServlet {
         switch (action) {
             case "Add":
                 studentDAO.addStudent(student);
-                request.setAttribute("student", student);
+                request.setAttribute("student", student);             
                 break;
             case "Delete":
                 studentDAO.deleteStudent(studentId);
                 break;
             case "Edit":
                 studentDAO.editStudent(student);
-                Student editStudent = studentDAO.getstudent(studentId);
-                request.setAttribute("student", editStudent);
+//                Student editStudent = studentDAO.getstudent(studentId);
+//                request.setAttribute("student", editStudent);
+                request.setAttribute("student", student); 
                 break;
             case "Search":
                 Student searchedStudent = studentDAO.getstudent(studentId);
