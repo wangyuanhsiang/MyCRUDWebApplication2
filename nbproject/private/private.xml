@@ -2,6 +2,9 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Shawn/Documents/NetBeansProjects/MyCRUDWebApplication2/src/java/com/shawn/dao/StudentDAO.java</file>
+            <file>file:/C:/Users/Shawn/Documents/NetBeansProjects/MyCRUDWebApplication2/src/java/com/shawn/model/Student.java</file>
+        </group>
     </open-files>
 </project-private>
